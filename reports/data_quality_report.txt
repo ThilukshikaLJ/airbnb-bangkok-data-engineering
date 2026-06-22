@@ -1,0 +1,105 @@
+
+=== LISTINGS ===
+Rows: 28806, Columns: 80
+Null Rates:
+description                       2.69
+neighborhood_overview            67.08
+host_name                         0.03
+host_since                        0.03
+host_location                    25.67
+host_about                       41.62
+host_response_time               19.60
+host_response_rate               19.60
+host_acceptance_rate             14.85
+host_is_superhost                 5.59
+host_thumbnail_url                0.03
+host_picture_url                  0.03
+host_neighbourhood               67.47
+host_listings_count               0.03
+host_total_listings_count         0.03
+host_verifications                0.03
+host_has_profile_pic              0.03
+host_identity_verified            0.03
+neighbourhood                    67.08
+neighbourhood_group_cleansed    100.00
+bathrooms                        19.40
+bathrooms_text                    0.42
+bedrooms                          4.53
+beds                             19.38
+price                            19.21
+minimum_minimum_nights            0.01
+maximum_minimum_nights            0.01
+minimum_maximum_nights            0.01
+maximum_maximum_nights            0.01
+calendar_updated                100.00
+has_availability                  7.80
+estimated_revenue_l365d          19.21
+first_review                     35.03
+last_review                      35.03
+review_scores_rating             35.03
+review_scores_accuracy           35.03
+review_scores_cleanliness        35.03
+review_scores_checkin            35.04
+review_scores_communication      35.03
+review_scores_location           35.04
+review_scores_value              35.05
+license                         100.00
+reviews_per_month                35.03
+price_clean                      19.21
+dtype: float64
+
+Unique Values:
+id                                              28806
+listing_url                                     28806
+scrape_id                                           1
+last_scraped                                        3
+source                                              2
+                                                ...  
+calculated_host_listings_count_entire_homes        82
+calculated_host_listings_count_private_rooms       43
+calculated_host_listings_count_shared_rooms        11
+reviews_per_month                                 679
+price_clean                                      4489
+Length: 80, dtype: int64
+
+
+=== REVIEWS ===
+Rows: 583333, Columns: 2
+Null Rates:
+Series([], dtype: float64)
+
+Unique Values:
+listing_id    18716
+date           4733
+dtype: int64
+
+
+=== CALENDAR ===
+Rows: 10514202, Columns: 7
+Null Rates:
+price             100.0
+adjusted_price    100.0
+dtype: float64
+
+Unique Values:
+listing_id        28806
+date                367
+available             2
+price                 0
+adjusted_price        0
+minimum_nights      114
+maximum_nights      198
+dtype: int64
+
+
+=== NEIGHBOURHOODS ===
+Rows: 50, Columns: 2
+Null Rates:
+neighbourhood_group    100.0
+dtype: float64
+
+Unique Values:
+neighbourhood_group     0
+neighbourhood          50
+dtype: int64
+

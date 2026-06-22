@@ -1,0 +1,107 @@
+=== LISTINGS SCHEMA ===
+id                                                int64
+listing_url                                      object
+scrape_id                                         int64
+last_scraped                                     object
+source                                           object
+                                                 ...   
+calculated_host_listings_count                    int64
+calculated_host_listings_count_entire_homes       int64
+calculated_host_listings_count_private_rooms      int64
+calculated_host_listings_count_shared_rooms       int64
+reviews_per_month                               float64
+Length: 79, dtype: object
+
+Missing Values:
+description                       776
+neighborhood_overview           19322
+host_name                           9
+host_since                          9
+host_location                    7394
+host_about                      11990
+host_response_time               5647
+host_response_rate               5647
+host_acceptance_rate             4279
+host_is_superhost                1610
+host_thumbnail_url                  9
+host_picture_url                    9
+host_neighbourhood              19436
+host_listings_count                 9
+host_total_listings_count           9
+host_verifications                  9
+host_has_profile_pic                9
+host_identity_verified              9
+neighbourhood                   19322
+neighbourhood_group_cleansed    28806
+bathrooms                        5589
+bathrooms_text                    122
+bedrooms                         1304
+beds                             5582
+price                            5533
+minimum_minimum_nights              3
+maximum_minimum_nights              3
+minimum_maximum_nights              3
+maximum_maximum_nights              3
+calendar_updated                28806
+has_availability                 2248
+estimated_revenue_l365d          5533
+first_review                    10090
+last_review                     10090
+review_scores_rating            10090
+review_scores_accuracy          10090
+review_scores_cleanliness       10091
+review_scores_checkin           10093
+review_scores_communication     10091
+review_scores_location          10094
+review_scores_value             10096
+license                         28806
+reviews_per_month               10090
+dtype: int64
+
+=== REVIEWS SCHEMA ===
+listing_id     int64
+date          object
+dtype: object
+
+=== CALENDAR SCHEMA ===
+listing_id          int64
+date               object
+available          object
+price             float64
+adjusted_price    float64
+minimum_nights      int64
+maximum_nights      int64
+dtype: object
+
+=== NEIGHBOURHOODS SCHEMA ===
+neighbourhood_group    float64
+neighbourhood           object
+dtype: object
+
+=== LISTINGS SAMPLE VALUES ===
+                 id     scrape_id  ...  calculated_host_listings_count_shared_rooms  reviews_per_month
+count  2.880600e+04  2.880600e+04  ...                                 28806.000000       18716.000000
+mean   7.995041e+17  2.025093e+13  ...                                     0.209123           0.970914
+std    5.786117e+17  0.000000e+00  ...                                     2.788738           1.475826
+min    2.793400e+04  2.025093e+13  ...                                     0.000000           0.010000
+25%    4.021719e+07  2.025093e+13  ...                                     0.000000           0.180000
+50%    9.946583e+17  2.025093e+13  ...                                     0.000000           0.500000
+75%    1.314730e+18  2.025093e+13  ...                                     0.000000           1.260000
+max    1.518168e+18  2.025093e+13  ...                                    58.000000          57.600000
+
+[8 rows x 45 columns]
+
+      id                         listing_url  ...  calculated_host_listings_count_shared_rooms reviews_per_month
+0  27934  https://www.airbnb.com/rooms/27934  ...                                            0               0.4
+1  27979  https://www.airbnb.com/rooms/27979  ...                                            0               NaN
+2  28745  https://www.airbnb.com/rooms/28745  ...                                            0               NaN
+
+[3 rows x 79 columns]
+
+=== FILE RELATIONSHIPS ===
+listings.id = Primary Key
+reviews.listing_id = Foreign Key → listings.id
+calendar.listing_id = Foreign Key → listings.id
+listings.neighbourhood = connects to neighbourhoods.neighbourhood
+Relationship type: One listing → Many reviews (one-to-many)
+Relationship type: One listing → Many calendar entries (one-to-many)

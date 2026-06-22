@@ -1,0 +1,4 @@
+﻿data/
+reports/airbnb_bangkok.db
+__pycache__/
+*.pyc
